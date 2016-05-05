@@ -1,0 +1,12 @@
+<h1>Welcome to the Contact Keeper!</h1>
+<input type="text" class="input" , placeholder="First & Last Name" , ng-model="nameInput"></input>
+<input type="text" class="input" , placeholder="Email Address" , ng-model="emailInput"></input>
+<input type="number" class="input" , placeholder="Phone Number" , ng-model="phoneInput"></input>
+<button class="button" ng-click="addContact()">Add to Contacts</button>
+
+<div class="contacts">
+    <div class="contact" ng-repeat="contact in contacts">
+        <span class="contactline1">{{contact.name}}</span>
+        <button class="single-contact" ng-click="goToContact(contact.name)">See Full Contact Information</button>
+    </div>
+</div>
